@@ -1,0 +1,269 @@
+@import url(reset.css);
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+[class*="__container"] {
+    max-width: 1000px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+[class*="__title"] {
+    text-align: center;
+    color: #fff;
+    font-family: Arial;
+    font-size: 32px;
+}
+[class*="block-"] {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+[class*="block-"]:not(:last-child) {
+    margin-right: 30px;
+}
+.header,
+.footer {
+    background-color: blue;
+    padding: 30px 0px;
+}
+.practice {
+    padding: 100px 0px;
+}
+.block__row-1 {
+    display: inline-block;
+    font-size: 0px;
+}
+.block__row-1,
+.block__row-2:not(:last-child) {
+    margin-bottom: 100px;
+}
+.block-rotate__item {
+    background-color: red;
+}
+.block-rotate:hover .block-rotate__item {
+    transform: rotate(160deg);
+}
+.block-scale:hover .block-scale__item {
+    background-color: silver;
+    transform: scale(0.5, 0.4);
+    border-radius: 50%;
+}
+.block-skew:hover .block-skew__item {
+    background-color: brown;
+    transform: skew(-20deg);
+}
+.block-origin:not(:last-child) {
+    margin-right: 150px;
+}
+.block-origin__item {
+    background-color: cadetblue;
+    transform-origin: bottom right;
+    transform: scale(0.5);
+}
+.block-origin:hover .block-origin__item {
+    transform: rotate(180deg) scale(1);
+}
+.block-mix:hover .block-mix__item {
+    background-color: silver;
+    transform: translate(200px, 0px) rotate(90deg) scale(0.8);
+    border-radius: 50%;
+}
+/* --------------block__row-2------- */
+.block-perspective {
+    perspective: 300px;
+    perspective-origin: center;
+    font-size: 0px;
+    position: relative;
+    z-index: 3;
+}
+.block-perspective:not(:last-child) {
+    margin-right: 100px;
+}
+.block-perspective__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.block-perspective:hover .block-perspective__item {
+    background-color: darkgrey;
+    transform: translate3d(70px, 0px, 50px);
+    width: 80px;
+    z-index: 4;
+}
+.block-perspective:hover .block-perspective__item--left {
+    transform: translate3d(-70px, 0px, 50px);
+}
+.block-rotate3d {
+    perspective: 600px;
+    perspective-origin: 20% 50%;
+}
+.block-rotate3d:hover .block-rotate3d__item {
+    transform: translate3d(0px, 40px, 100px) rotate3d(90, 0, 0, 90deg);
+}
+.block-scale3d {
+    perspective: 200px;
+    perspective-origin: center;
+}
+.block-scale3d:hover .block-scale3d__item {
+    background-color: aquamarine;
+    width: 30px;
+    transform: scale3d(1, 1, 0.5);
+}
+.block-style3d {
+    perspective: 400px;
+    perspective-origin: top right;
+    transform-style: preserve-3d;
+}
+.block-style3d:hover .block-style3d__item {
+    transform: translate(100px, 0px) rotateX(180deg);
+    background-color: blanchedalmond;
+}
+/* ----------- block__bus--------*/
+.bus__housing {
+    position: relative;
+    background-color: gold;
+    border-radius: 20px 20px 0px 0px;
+    width: 900px;
+    height: 230px;
+    overflow: hidden;
+}
+.bus__housing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #000;
+}
+.bus__housing::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: crimson;
+}
+.bus__window {
+    position: absolute;
+    bottom: 80px;
+    left: -30px;
+    width: 130px;
+    height: 80px;
+    background-color: cyan;
+    transform: skew(30deg);
+}
+.bus__windows {
+    position: absolute;
+    bottom: 70px;
+    right: 330px;
+    width: 250px;
+    height: 80px;
+    background-color: cyan;
+}
+.bus__windows::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 125px;
+    width: 10px;
+    height: 80px;
+    background-color: gold;
+}
+.bus__door--left {
+    position: absolute;
+    bottom: 0;
+    left: 160px;
+    background-color: chocolate;
+    width: 70px;
+    height: 130px;
+    z-index: 2;
+}
+.bus__door {
+    position: absolute;
+    bottom: 30px;
+    right: 150px;
+    background-color: chocolate;
+    width: 70px;
+    height: 130px;
+    z-index: 2;
+}
+.door__window {
+    position: absolute;
+    bottom: 50px;
+    left: 15px;
+    width: 40px;
+    height: 70px;
+    z-index: 3;
+    background-color: #000;
+    opacity: 0.5;
+}
+.door__handle {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+}
+.bus__windshield {
+    position: absolute;
+    bottom: 80px;
+    right: -20px;
+    transform: skew(-30deg);
+    background-color: cyan;
+    width: 100px;
+    height: 80px;
+    z-index: 2;
+}
+.bus__sub-wheel {
+    position: absolute;
+    bottom: -30px;
+    right: 28px;
+    width: 80px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: silver;
+    z-index: 2;
+}
+.bus__sub-wheel--left {
+    position: absolute;
+    bottom: -30px;
+    left: 28px;
+}
+.bus__wheels {
+    position: relative;
+}
+.bus__wheel {
+    display: inline-block;
+    position: absolute;
+    bottom: -40px;
+    right: 110px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(147, 147, 156);
+    z-index: 3;
+}
+.bus__wheel--left {
+    position: absolute;
+    bottom: -40px;
+    left: 37px;
+}
+.bus__point {
+    position: absolute;
+    top: 40%;
+    left: 41%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+}
